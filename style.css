@@ -268,9 +268,9 @@ ul {
 .post {
     border: 1px solid var(--light_accent);
 
-    -webkit-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
-    -moz-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
-    box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+    -webkit-box-shadow: -5px 3px 16px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: -5px 3px 16px 1px rgba(0,0,0,0.75);
+    box-shadow: -5px 3px 16px 1px rgba(0,0,0,0.75);
 }
 
 .thumbnail {
@@ -291,6 +291,56 @@ ul {
 
 .post-intro {
     font-size: 15px;
+}
+
+
+.bookshelf {
+    
+}
+
+.fiction {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 320px);
+    gap: 40px;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+.nonfiction {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 320px);
+    gap: 40px;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+.book {
+    border: 1px solid var(--light_accent);
+    border-radius: 5px;
+
+    -webkit-box-shadow: -16px 14px 22px 7px rgba(0,0,0,0.75);
+    -moz-box-shadow: -16px 14px 22px 7px rgba(0,0,0,0.75);
+    box-shadow: -16px 14px 22px 7px rgba(0,0,0,0.75);
+}
+
+.book h6 {
+    text-align: center;
+}
+
+.cover {
+    display: block;
+    width: 100%;
+    height: 400px;
+    object-fit: fill;
+}
+
+.book-preview {
+    background-color: var(--light_shade);
+    padding: 15px;
+}
+/* 1:25:00 for static colors*/
+.book-remark {
+    margin: 0;
 }
 
 
