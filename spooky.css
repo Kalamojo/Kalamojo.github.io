@@ -1,0 +1,19 @@
+:root {
+    --light_shade: #2C292C;
+    --light_accent: #865665;
+    --main_brand: #E3532A;
+    --dark_accent: #EDA272;
+    --dark_shade: #ECDCCC;
+
+    --themeDotBorder: black;
+
+    --previewBG: rgba(109, 90, 33, 0.8);
+    --previewShadow: #362c0a;
+}
+
+
+.s1 {
+    background-color: var(--light_shade);
+    border-bottom: 1px solid var(--light_accent);
+    overflow: auto;
+}

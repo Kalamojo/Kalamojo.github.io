@@ -1,0 +1,12 @@
+:root {
+    --light_shade: #CFDEF0;
+    --light_accent: #7F94CA;
+    --main_brand: #5583E6;
+    --dark_accent: #3D589A;
+    --dark_shade: #353FA4;
+
+    --themeDotBorder: black;
+
+    --previewBG: rgb(251, 249, 243, 0.8);
+    --previewShadow: #f0ead6;
+}
