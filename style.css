@@ -14,6 +14,7 @@
 html, body {
     padding: 0;
     margin: 0;
+    scroll-behavior: smooth;
 }
 
 body * {
@@ -267,14 +268,20 @@ ul {
 
 .post {
     border: 1px solid var(--light_accent);
+    border-radius: 30px 3px 30px 3px;
 
     -webkit-box-shadow: -5px 3px 16px 1px rgba(0,0,0,0.75);
     -moz-box-shadow: -5px 3px 16px 1px rgba(0,0,0,0.75);
     box-shadow: -5px 3px 16px 1px rgba(0,0,0,0.75);
 }
 
+.post:hover, .book:hover {
+    transform: scale(1.15);
+}
+
 .thumbnail {
     display: block;
+    border-radius: 30px 3px 0 0;
     width: 100%;
     height: 240px;
     object-fit: cover;
@@ -282,6 +289,7 @@ ul {
 
 .post-preview {
     background-color: var(--light_shade);
+    border-radius: 0 0 30px 3px;
     padding: 15px;
 }
 /* 1:25:00 for static colors*/
