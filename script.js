@@ -2,7 +2,7 @@
 let theme = localStorage.getItem('theme');
 
 if(theme == null) {
-    setTheme('light');
+    setTheme('dark');
 }
 else {
     setTheme(theme);
@@ -26,11 +26,11 @@ function setTheme(mode) {
         case 'green':
             document.querySelector('#theme-style').href = 'green.css';
             break;
-        case 'spooky':
-            document.querySelector('#theme-style').href = 'spooky.css';
+        case 'light':
+            document.querySelector('#theme-style').href = 'style.css';
             break;
         default:
-            document.querySelector('#theme-style').href = 'style.css';
+            document.querySelector('#theme-style').href = 'spooky.css';
     }
 
     localStorage.setItem('theme', mode);
