@@ -35,3 +35,35 @@ function setTheme(mode) {
 
     localStorage.setItem('theme', mode);
 }
+
+$(function() {
+    $(".fiction").sortable({
+        update: function(event, ui) {
+                getIdsOfImages();
+            } //end update       
+    });
+});
+
+function getIdsOfImages() {
+    var values = [];
+    $('.fic-item').each(function(index) {
+        values.push($(this).attr("id")
+                    .replace("imageNo", ""));
+    });
+}
+
+$(function() {
+    $(".nonfiction").sortable({
+        update: function(event, ui) {
+                getIdsOfImages();
+            } //end update       
+    });
+});
+
+function getIdsOfImages() {
+    var values = [];
+    $('.nonfic-item').each(function(index) {
+        values.push($(this).attr("id")
+                    .replace("imageNo", ""));
+    });
+}

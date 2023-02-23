@@ -275,8 +275,12 @@ ul {
     box-shadow: -5px 3px 16px 1px rgba(0,0,0,0.75);
 }
 
-.post:hover, .book:hover {
+.post:hover {
     transform: scale(1.15);
+}
+
+.book:hover {
+    transform: scale(1.05);
 }
 
 .thumbnail {
