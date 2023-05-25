@@ -199,6 +199,7 @@ a {
     color: var(--dark_shade);
 }
 
+/*
 .theme-dot {
     height: 30px;
     width: 30px;
@@ -214,6 +215,7 @@ a {
 
     cursor: pointer;
 }
+*/
 
 .theme-dot:hover {
     border-width: 5px;
