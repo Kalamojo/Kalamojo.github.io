@@ -24,7 +24,7 @@ let col_dict = {
     'Cotton Candy Delight: Sweet pastel pinks, blues, and purples reminiscent of cotton candy.': ['#F7E8ED', '#DFB8CB', '#A15E85', '#822C54', '#531633'], 
     'Desert Oasis: A desert-inspired palette featuring sandy beiges, dusty pinks, and muted blues.': ['#F2EBE5', '#D5BCB1', '#B8866D', '#8F5947', '#642F28'], 
     'Mystic Moonlight: Mysterious shades of midnight blue, silver, and deep purple.': ['#EDE6EA', '#C0B1C0', '#8D678D', '#614261', '#3A253A'], 
-    'Sun-kissed Sands: A warm blend of sandy beige, golden tan, and sun-kissed yellow': ['#F5F2E6', '#DAD6B7', '#BFB883', '#8F8B59', ' #64632']
+    'Sun-kissed Sands: A warm blend of sandy beige, golden tan, and sun-kissed yellow': ['#F5F2E6', '#DAD6B7', '#BFB883', '#8F8B59', ' #64632F']
 };
 
 let theme = localStorage.getItem('theme');
