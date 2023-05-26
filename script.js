@@ -1,11 +1,12 @@
 const submit = document.querySelector("#submit-color");
 
+/*
 let col_dict = {
     "blue": ["#CFDEF0", "#7F94CA", "#5583E6", "#3D589A", "#353FA4"],
     "green": ["#F4F2F3", "#858B6C", "#B19377", "#40727A", "#405523"],
     "light": ["#F4F8F5", "#F0B145", "#C86979", "#28B2DF", "#2A4158"],
     "spooky": ["#F4F2EE", "#E7A56D", "#E8613B", "#958A91", "#45343A"],
-    'Serene Breeze: A calming combination of pale blue and soft white.': ['#E9F0F7', '#A6C0DF', '#4781B8', '#285A90', '#153A5E'], 
+    'Serene Breeze: A calming combination of pale blue and soft white.': ['#E6E1BB', '#4DC4C1', '#0DB0C4', '#17788D', '#0B1727'], 
     'Golden Harvest: Warm hues of gold, burnt orange, and amber.': ['#FBE6D1', '#F3B77E', '#E5943B', '#A15E26', '#663513'], 
     'Twilight Mist: Muted shades of purples and grays, evoking a sense of mystery.': ['#EDECF2', '#BEBDD7', '#7E7AAE', '#544F82', '#312C56'], 
     'Coral Bliss: Vibrant coral mixed with delicate pastel tones.': ['#FCEDE9', '#F8B4A9', '#F27463', '#B74D41', '#742F26'], 
@@ -25,6 +26,33 @@ let col_dict = {
     'Desert Oasis: A desert-inspired palette featuring sandy beiges, dusty pinks, and muted blues.': ['#F2EBE5', '#D5BCB1', '#B8866D', '#8F5947', '#642F28'], 
     'Mystic Moonlight: Mysterious shades of midnight blue, silver, and deep purple.': ['#EDE6EA', '#C0B1C0', '#8D678D', '#614261', '#3A253A'], 
     'Sun-kissed Sands: A warm blend of sandy beige, golden tan, and sun-kissed yellow': ['#F5F2E6', '#DAD6B7', '#BFB883', '#8F8B59', ' #64632F']
+};
+*/
+let col_dict = {
+    "blue": ["#CFDEF0", "#7F94CA", "#5583E6", "#3D589A", "#353FA4"],
+    "green": ["#F4F2F3", "#858B6C", "#B19377", "#40727A", "#405523"],
+    "light": ["#F4F8F5", "#F0B145", "#C86979", "#28B2DF", "#2A4158"],
+    "spooky": ["#F4F2EE", "#E7A56D", "#E8613B", "#958A91", "#45343A"],
+    'Serene Breeze: A calming combination of pale blue and soft white.': ['#FAFAF9', '#C1D6D7', '#9DCBC8', '#A5A7AA', '#5C8FC3'], 
+    'Golden Harvest: Warm hues of gold, burnt orange, and amber.': ['#F6F8F6', '#D7C3AC', '#F37D53', '#CBA830', '#795441'], 
+    'Twilight Mist: Muted shades of purples and grays, evoking a sense of mystery.': ['#ECEBEA', '#8B7B6E', '#7A6473', '#766980', '#1D1E25'],
+    'Coral Bliss: Vibrant coral mixed with delicate pastel tones.': ['#EAE8E5', '#7171A4', '#C6767D', '#885364', '#36314B'], 
+    'Forest Whispers: A rich blend of deep greens and earthy browns.': ['#EFF0EC', '#96A729', '#A7A596', '#745B41', '#215C33'], 
+    'Duskfire: Fiery oranges, deep purples, and smoky grays reminiscent of a sunset.': ['#F5F5F2', '#8877BB', '#F58823', '#A46551', '#433A48'], 
+    'Oceanic Dreams: Cool blues and greens inspired by the depths of the sea.': ['#EEE9E9', '#A4A36A', '#8EAED5', '#837779', '#13796B'], 
+    'Cinnamon Spice: A warm palette featuring shades of cinnamon, nutmeg, and ginger.': ['#E8EAE2', '#7E7B7D', '#E53826', '#7C2A34', '#271320'], 
+    'Citrus Zest: A refreshing combination of zesty yellows and tangy oranges.': ['#F9F9FA', '#B0B4BE', '#E7C0A2', '#B8A1A9', '#E27225'], 
+    'Misty Lilac: Soft shades of lilac and lavender with a hint of gray.': ['#E7E3DF', '#969395', '#9F3F59', '#8E8C8D', '#4F3675'], 
+    'Rustic Charm: Warm, rustic tones of terracotta, mustard, and weathered wood.': ['#F5F4EF', '#B0A190', '#E1A94D', '#968173', '#875E37'], 
+    'Silver Lining: A sophisticated blend of silvers, grays, and subtle hints of blue.': ['#FCFBFB', '#BDC5C5', '#8EC0D3', '#BBBEC4', '#8C8E9F'], 
+    'Meadow Glow: Bright pops of green, yellow, and pink like a vibrant meadow.': ['#FAFAFB', '#DDD3A9', '#EBC953', '#E89394', '#79AD90'], 
+    'Enchanted Forest: Deep emerald greens, mossy browns, and magical splashes of gold.': ['#F9F9FA', '#A5A9A8', '#DAA645', '#8E611C', '#255036'], 
+    'Chocolate Truffle: Indulgent shades of rich, dark brown and velvety cocoa.': ['#F6F6F5', '#BA8B66', '#C7A98B', '#927C74', '#582E1C'], 
+    'Autumn Symphony: A symphony of warm oranges, deep reds, and golden yellows.': ['#EEEFE5', '#F0967C', '#E5A885', '#BF8C84', '#DE5C38'], 
+    'Cotton Candy Delight: Sweet pastel pinks, blues, and purples reminiscent of cotton candy.': ['#F4F5F3', '#885DBC', '#56C3CB', '#A9526A', '#31485F'], 
+    'Desert Oasis: A desert-inspired palette featuring sandy beiges, dusty pinks, and muted blues.': ['#F1F3F7', '#E27984', '#567080', '#9B8F7A', '#736C67'], 
+    'Mystic Moonlight: Mysterious shades of midnight blue, silver, and deep purple.': ['#FAF9FA', '#9F9F9F', '#34A8D9', '#7A2491', '#223C73'], 
+    'Sun-kissed Sands: A warm blend of sandy beige, golden tan, and sun-kissed yellow': ['#FAF9FB', '#DCC7AF', '#E4B54A', '#858C75', ' #AB761C']
 };
 
 let theme = localStorage.getItem('theme');
