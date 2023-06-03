@@ -118,6 +118,7 @@ function setTheme(mode) {
     }
     */
     document.documentElement.style.setProperty('--light_shade', colors[0]);
+    document.documentElement.style.setProperty('--light_shade_thin', colors[0] + "CC");
     document.documentElement.style.setProperty('--light_accent', colors[1]);
     document.documentElement.style.setProperty('--main_brand', colors[2]);
     document.documentElement.style.setProperty('--dark_accent', colors[3]);

@@ -5,10 +5,13 @@
     --dark_accent: #FFF;
     --dark_shade: #FFF;
 
-    --themeDotBorder: black;
+    --light_shade_thin: #FFF;
 
+    --themeDotBorder: black;
+/*
     --previewBG: rgb(251, 249, 243, 0.8);
     --previewShadow: #f0ead6;
+*/
 }
 
 html, body {
@@ -252,7 +255,7 @@ a {
 }
 
 #preview-shadow {
-    background-color: var(--previewShadow);
+    background-color: var(--light_shade);
     width: 300px;
     height: 150px;
     padding-left: 30px;
@@ -262,7 +265,7 @@ a {
 #preview {
     width: 300px;
     border: 1.5px solid var(--dark_accent);
-    background-color: var(--previewBG);
+    background-color: var(--light_shade_thin);
     padding: 15px;
     position: relative;
 }
