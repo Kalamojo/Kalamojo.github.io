@@ -1,3 +1,72 @@
+const container = document.querySelector('#blockade');
+const pages = document.querySelectorAll('.blocks');
+const playButton = document.querySelector('.play');
+const audioPlayer = document.querySelector('#sound1');
+const profile_pic = document.querySelector("#profile-holder");
+
+playButton.addEventListener('click', togglePlayback);
+
+audioPlayer.addEventListener('play', () => {
+  playButton.classList.add('paused');
+});
+
+audioPlayer.addEventListener('pause', () => {
+  playButton.classList.remove('paused');
+});
+
+function togglePlayback() {
+  if (audioPlayer.paused) {
+    audioPlayer.play();
+  } else {
+    audioPlayer.pause();
+  }
+}
+
+
+
+container.addEventListener('scroll', synchronizeScroll);
+
+function synchronizeScroll() {
+  const activePageIndex = Math.round(container.scrollLeft / container.offsetWidth);
+  const activePage = pages[activePageIndex];
+
+  pages.forEach((page, index) => {
+    if (index !== activePageIndex) {
+      page.scrollTop = activePage.scrollTop;
+    }
+  });
+}
+
+let scrollTimeout;
+pages.forEach((page, index) => {
+    page.addEventListener('scroll', handleScroll);
+    function handleScroll() {
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(() => {
+            let threshold = 75;
+            if (document.documentElement.clientWidth < 800) {
+                threshold = 20
+            }
+      
+          // Perform actions with the scroll position of the active page
+          const scrollPosition = page.scrollTop;
+          if (scrollPosition > threshold) {
+            profile_pic.style.opacity = 0;
+          }
+          else {
+            profile_pic.style.opacity = 1
+          }
+          console.log('Scroll position:', scrollPosition);
+      
+          // Add your custom code here to handle the scroll position
+      
+        }, 200); // Adjust the timeout duration as needed
+      }
+});
+
+
+
+/*
 const submit = document.querySelector("#submit-color");
 
 let col_dict = {
@@ -70,9 +139,10 @@ function setTheme(mode) {
     document.documentElement.style.setProperty('--light_shade_thin', colors[0] + "CC");
     document.documentElement.style.setProperty('--light_accent', colors[1]);
     document.documentElement.style.setProperty('--main_brand', colors[2]);
-    document.documentElement.style.setProperty('--main_brand_thin', colors[2] + "99");
+    document.documentElement.style.setProperty('--main_brand_thin', colors[2] + "33");
     document.documentElement.style.setProperty('--dark_accent', colors[3]);
     document.documentElement.style.setProperty('--dark_shade', colors[4]);
 
     localStorage.setItem('theme', mode);
 }
+*/
