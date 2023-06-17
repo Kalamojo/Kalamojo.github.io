@@ -81,7 +81,7 @@ body * {
     margin-top: auto;
     width: 90%;
     height: 80%;
-    background-color: rgb(63, 62, 62);
+    background-color: rgb(168, 110, 30);
 }
 
 
@@ -122,7 +122,7 @@ body * {
     pointer-events: none;
 }
 .shadow1 {
-    box-shadow: inset 0px 30px 18px -1px rgb(63, 62, 62, 0.8);
+    box-shadow: inset 0px 30px 18px -1px rgba(168, 110, 30, 0.8);
 }
 .shadow2 {
     height: 100%;
