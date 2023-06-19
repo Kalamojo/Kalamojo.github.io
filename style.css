@@ -152,7 +152,7 @@ body * {
 
 .big-block {
     background-color: rgb(59, 58, 58);
-    padding: 10px;
+    padding: 0 10px 10px 10px;
     margin: 15px 20px;
 
     box-shadow: 0px 0.5px 5px 0px #000000;
@@ -163,9 +163,18 @@ body * {
     width: auto;
 }
 
+.col-center {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .two-col {
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .col1, .col2 {
@@ -191,6 +200,87 @@ body * {
 
 
 
+
+/* Histogram Stuff */
+.chart {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(100, 1fr);
+    grid-column-gap: 40px;
+    height: 200px;
+    width: 100%;
+    margin-top: 30px;
+    text-align: center;
+}
+.chart p {
+    margin-top: -30px;
+}
+.chart-words {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-gap: 40px;
+    width: 100%;
+    text-align: center;
+}
+  
+[class*="bar"] {
+    border-radius: 5px 5px 0 0;
+    background-color: #ff4136;
+    grid-row-start: 1;
+    grid-row-end: 101;
+    text-align: center;
+}
+
+.bar-1 {
+    grid-row-start: calc(100 - 57);
+}
+.bar-2 {
+    grid-row-start: calc(100 - 100);
+}
+.bar-3 {
+    grid-row-start: calc(100 - 63);
+}
+.bar-4 {
+    grid-row-start: calc(100 - 27);
+}
+.bar-5 {
+    grid-row-start: calc(100 - 45);
+}
+
+
+
+
+
+/* Image stuff */
+.experience-img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+}
+
+
+
+
+/* Icon stuff */
+
+            
+.right-arrow {
+    width: 50px;
+    height: 50px;
+    border: 3px solid white;
+    border-left: 0;
+    border-top: 0;
+    transform: rotate(315deg);
+    margin-right: 25%;
+}
+      
+  
+  
+
+
+
+
+
 @media screen and (max-width: 800px){
     #dex_bg_outer {
         width: 100%;
@@ -203,5 +293,19 @@ body * {
 
     #profile-holder {
         transform: translateY(30%);
+    }
+
+    .right-arrow {
+        width: 5vw;
+        height: 5vw;
+        margin: 0 25px;
+    }
+
+    .no-small {
+        display: none;
+    }
+
+    .chart {
+        grid-column-gap: 10px;
     }
 }
