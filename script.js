@@ -42,9 +42,10 @@ pages.forEach((page, index) => {
     page.addEventListener('scroll', handleScroll);
     function handleScroll() {
         clearTimeout(scrollTimeout);
+        profile_pic.style.zIndex = 1;
         scrollTimeout = setTimeout(() => {
             let threshold = 75;
-            if (document.documentElement.clientWidth < 800) {
+            if (document.documentElement.clientWidth < 950) {
                 threshold = 20
             }
       
@@ -52,9 +53,13 @@ pages.forEach((page, index) => {
           const scrollPosition = page.scrollTop;
           if (scrollPosition > threshold) {
             profile_pic.style.opacity = 0;
+            setTimeout(() => {
+              profile_pic.style.zIndex = 0;
+            }, 200);
           }
           else {
             profile_pic.style.opacity = 1
+            profile_pic.style.zIndex = 1;
           }
           console.log('Scroll position:', scrollPosition);
       
@@ -63,6 +68,56 @@ pages.forEach((page, index) => {
         }, 200); // Adjust the timeout duration as needed
       }
 });
+
+
+
+
+
+// Modal Stuff
+/*
+const openModalButton = document.getElementById("openModal");
+const closeModalButton = document.getElementById("closeModal");
+const modalContainer = document.getElementById("modalContainer");
+
+openModalButton.addEventListener("click", function() {
+  //modalContainer.style.display = "block";
+  modalContainer.style.top = "0";
+});
+
+closeModalButton.addEventListener("click", function() {
+  //modalContainer.style.display = "none";
+  modalContainer.style.top = "105%";
+});
+*/
+
+const outerContainer = document.querySelector("#dex_bg_outer");
+const openModalButtons = document.querySelectorAll(".openModal");
+openModalButtons.forEach((button) => {
+  let ind = button.dataset.container;
+  const container = document.querySelector("#container-" + String(ind));
+  const close = document.querySelector("#close-" + String(ind));
+
+  button.addEventListener("click", function() {
+    document.querySelectorAll(".in-view").forEach((modal) => {
+      modal.classList.remove("in-view");
+    })
+    container.classList.add("in-view");
+    document.body.classList.add("shift-view");
+    outerContainer.classList.add("filled");
+  })
+
+  close.addEventListener("click", function() {
+    //modalContainer.style.display = "none";
+    //container.style.top = "105%";
+    //container.classList.remove("in-view");
+    outerContainer.classList.remove("filled");
+    document.body.classList.remove("shift-view");
+    document.querySelectorAll(".in-view").forEach((modal) => {
+      modal.classList.remove("in-view");
+    })
+  });
+})
+
 
 
 
