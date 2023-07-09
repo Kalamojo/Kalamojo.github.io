@@ -11,255 +11,522 @@
 
     <link rel="stylesheet" type="text/css" href="style.css">
 
-    <link id="theme-style" type="text/css" rel="stylesheet" href="">
-
     <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel = "stylesheet">
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 
 </head>
 <body>
-    <section class="s1">
-        <div class="main-container">
-            <div class="home-wrap">
-                <h1>Kolade Alabi</h1>
-            </div>
-        </div>
-    </section>
-
-    <section class="s2">
-        <div class="intro-wrap">
-            <nav class="nav-wrap">
-                <div class="icon-wrap">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                        <desc>Download more icon variants from https://tabler-icons.io/i/home</desc>
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <polyline points="5 12 3 12 12 3 21 12 19 12"></polyline>
-                        <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7"></path>
-                        <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6"></path>
-                     </svg>
+    <div id="main-pokedex">
+        <img src="resources/Haxorus_Profile.png" id="profile-holder"></img>
+        <section id="dex_bg" class="dex-background">
+            <div id="blockade">
+                <div class="shadow1">
+                    <div class="shadow2"></div>
                 </div>
-
-                <ul id="navigation">
-                    <li><a href="#contact-form">Contact</a></li>
-                </ul>
-            </nav>
-
-            <nav style="padding-top: 50px; padding-bottom: 50px;" class="left-colunm">
-                <img id="profile_pic" src="resources/fresh_cut.jpg" alt="Image of Kolade">
-                <h5 style="text-align: center; line-height: 0">Personalize Theme</h5>
-
-                <nav class="theme-options-wrap">
-                    <form>
-                        <input type="text" id="searchBox" placeholder="Enter a description">
-                        <button id="submit-color" onclick="handleSearch()">Search</button>
-                    </form>
-                </nav>
-
-                <p id="settings-note">Describe any color scheme you wish for the website</p>
-            </nav>
-
-            <nav class="right-column">
-                <div id="preview-shadow">
-                    <div id="preview">
-                        <div id="tl" class="corner"></div>
-                        <div id="tr" class="corner"></div>
-                        <h3>Who I am</h3>
-                        <p>I am a student researcher hoping to find a position in Data Science.</p>
-                        <div id="bl" class="corner"></div>
-                        <div id="br" class="corner"></div>
+                <div id="page-1" class="blocks">
+                    <div class="inner-wrapper">
+                        <div class="big-block two-col" style="justify-content: space-between;">
+                            <div class="col1">
+                                <span>
+                                    <h2 style="display: inline;">Kolade Alabi</h2>
+                                    <p style="display: inline;"> #001</p>
+                                </span>
+                                <span>
+                                    <div class="mini-block b1">SWE</div>
+                                </span>
+                                <p>Aspiring Machine Learning Researcher</p>
+                            </div>
+                            <div class="col2">
+                                <p style="white-space: nowrap;">Height: 6.4 ft</p>
+                                <p style="white-space: nowrap;">Weight: 160.0 lbs</p>
+                                <span style="display: flex; align-items: center;">
+                                    <audio id="sound1" src="resources/Howdy.m4a" preload="auto"></audio>
+                                    <button class="play"></button>
+                                    <a target="_blank" href="https://www.linkedin.com/in/kolade-alabi"><svg style="margin-right: 10px;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                                        <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+                                    </svg></a>
+                                    <a target="_blank" href="https://github.com/Kalamojo"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                                    </svg></a>
+                                </span>
+                            </div>
+                            
+                        </div>
+                        <div class="big-block">
+                            <h2>Description</h2>
+                            <p style="text-align: center;">
+                                Kolade Alabi's passion lies in Machine Learning, where he relentlessly explores algorithms and models to unlock the secrets of pattern recognition and data analysis. His enthusiasm for this field extends to Data Science, as Kolade eagerly delves into the depths of data sets, extracting meaningful insights and creating innovative solutions.
+                            </p>
+                        </div>
+                        <div class="big-block">
+                            <h2>Experience Tree</h2>
+                            <div class="two-col">
+                                <span class="col-center">
+                                    <img src="resources/utrgv-experience.png" class="experience-img"></img>
+                                    <p>UTRGV <span class="no-small"> Undergratuate RA</span></p>
+                                </span>
+                                <span class="col-center">
+                                    <div class="right-arrow"></div>
+                                    <p class="no-small">June 2023</p>
+                                </span>
+                                <span class="col-center">
+                                    <img src="resources/capone-experience.png" class="experience-img"></img>
+                                    <p>Capital One<span class="no-small"> SWE Intern</span></p>
+                                </span>
+                                <span class="col-center">
+                                    <div class="right-arrow"></div>
+                                    <p class="no-small">August 2023</p>
+                                </span>
+                                <span class="col-center">
+                                    <img src="resources/jpmc-experience.png" class="experience-img"></img>
+                                    <p>JPMC<span class="no-small"> New Grad SWE</span></p>
+                                </span>
+                            </div>
+                        </div>
+                        
                     </div>
                 </div>
-            </nav>
-        </div>
-    </section>
+                <div id="page-2" class="blocks">
+                    <div class="inner-wrapper">
+                        <div class="big-block">
+                            <h2>Stuff is cool, or at least it will be</h2>
+                            <span class="two-col" style="gap: 40px;">
+                                <a href="#" class="openModal" data-container="1"><h3 style="margin: 0;">Debugger</h3></a>
+                            </span>
+                        </div>
+                        <div class="big-block">
+                            <h2>Languages</h2>
+                            <span style="display: flex; justify-content: center;">
+                                <div class="three-col">
+                                    <div class="lang" style="background-color: #FF5733;">
+                                        Python
+                                        <div class="circ-years" style="border-color: #FF5733;"><p>2yr</p></div>
+                                    </div>
+                                    <div class="lang" style="background-color: #6C49A8;">
+                                        C/C++
+                                        <div class="circ-years" style="border-color: #6C49A8;"><p>2yr</p></div>
+                                    </div>
+                                    <div class="lang" style="background-color: #b3aa38;">
+                                        JS
+                                        <div class="circ-years" style="border-color: #b3aa38;"><p>1yr</p></div>
+                                    </div>
+                                    <div class="lang" style="background-color: #68ab97;">
+                                        R
+                                        <div class="circ-years" style="border-color: #68ab97;"><p>2yr</p></div>
+                                    </div>
+                                    <div class="lang" style="background-color: #C8457F;">
+                                        Java
+                                        <div class="circ-years" style="border-color: #C8457F;"><p>2yr</p></div>
+                                    </div>
+                                </div>
+                            </span>
+                        </div>
+                        <div class="big-block">
+                            <h2>Developer Tools</h2>
+                            <span style="display: flex; justify-content: center;">
+                                <div class="three-col">
+                                    <div class="lang" style="background-color: #B94F26;">
+                                        Git
+                                        <div class="circ-years" style="border-color: #B94F26;"><p>1yr</p></div>
+                                    </div>
+                                    <div class="lang" style="background-color: #3E8A9D;">
+                                        Jira
+                                        <div class="circ-years" style="border-color: #3E8A9D;"><p>2yr</p></div>
+                                    </div>
+                                    <div class="lang" style="background-color: #aab534;">
+                                        VSCode
+                                        <div class="circ-years" style="border-color: #aab534;"><p>1yr</p></div>
+                                    </div>
+                                    <div class="lang" style="background-color: #8E4FA7;">
+                                        SQLite
+                                        <div class="circ-years" style="border-color: #8E4FA7;"><p>1yr</p></div>
+                                    </div>
+                                    <div class="lang" style="background-color: #56C18D;">
+                                        Slurm
+                                        <div class="circ-years" style="border-color: #56C18D;"><p>1yr</p></div>
+                                    </div>
+                                    <div class="lang" style="background-color: #E8BC5D;">
+                                        Jmeter
+                                        <div class="circ-years" style="border-color: #E8BC5D;"><p>1yr</p></div>
+                                    </div>
+                                </div>
+                            </span>
+                        </div>
+                        <div class="big-block">
+                            <h2>Base Stats</h2>
+                            <div class="chart">
+                                <div class="bar-1"><p>75</p></div>
+                                <div class="bar-2"><p>125</p></div>
+                                <div class="bar-3"><p>140</p></div>
+                                <div class="bar-4"><p>60</p></div>
+                                <div class="bar-5"><p>90</p></div>
+                                <div class="bar-6"><p>40</p></div>
+                            </div>
+                            <span class="chart-words">
+                                <p class="no-small">Frontend Development</p>
+                                <p class="no-small">Data Science</p>
+                                <p class="no-small">Machine Learning</p>
+                                <p class="no-small">Systems Programming</p>
+                                <p class="no-small">Backend Development</p>
+                                <p class="no-small">Cybersecurity</p>
 
-    <section class="s3">
-        <div class="main-container">
-            <div class="about-wrap">
-                <header class="about-me">
-                    <h4>About Me</h4>
+                                <p class="yes-small">Frontend</p>
+                                <p class="yes-small">DS</p>
+                                <p class="yes-small">ML</p>
+                                <p class="yes-small">Systems</p>
+                                <p class="yes-small">Backend</p>
+                                <p class="yes-small">Cyber</p>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div id="page-3" class="blocks">
+                    <div class="inner-wrapper">
+                        <div class="big-block">
+                            <h2>Projects</h2>
+                            <span class="four-col">
 
-                    <p>I am a Software Engineer interested in Machine Learning and its applications in Data Science.</p>
+                                <a href="#" class="openModal" data-container="2"><div class="project-entry">
+                                    <div class="project c1">
+                                        Anime TrVAE
+                                        <p>Physical</p>
+                                        <div class="circ-level"><p>-</p></div>
+                                    </div>
+                                    <div class="skills-used">
+                                        TensorFlow, Keras
+                                    </div>
+                                </div></a>
 
-                    <p>With the time I have, I plan to develop my skills to help solve as many problems as possible.</p>
+                                <a href="#" class="openModal" data-container="3"><div class="project-entry">
+                                    <div class="project c1">
+                                        Some Context, Please?
+                                        <p>Special</p>
+                                        <div class="circ-level"><p>-</p></div>
+                                    </div>
+                                    <div class="skills-used">
+                                        PRAW, Tensorflow, Streamlit
+                                    </div>
+                                </div></a>
+
+                                <a href="#" class="openModal" data-container="4"><div class="project-entry">
+                                    <div class="project c3">
+                                        NotifAI
+                                        <p>Special</p>
+                                        <div class="circ-level"><p>-</p></div>
+                                    </div>
+                                    <div class="skills-used">
+                                        Cohere, Flask, Android Studio
+                                    </div>
+                                </div></a>
+
+                                <a href="#" class="openModal" data-container="5"><div class="project-entry">
+                                    <div class="project c2">
+                                        Data Science Final
+                                        <p>Special</p>
+                                        <div class="circ-level"><p>-</p></div>
+                                    </div>
+                                    <div class="skills-used">
+                                        NLTK, scikit-learn, Tkinter
+                                    </div>
+                                </div></a>
+
+                                <a href="#" class="openModal" data-container="6"><div class="project-entry">
+                                    <div class="project c1">
+                                        Anime Recommender
+                                        <p>Special</p>
+                                        <div class="circ-level"><p>-</p></div>
+                                    </div>
+                                    <div class="skills-used">
+                                        scikit-learn, Pandas, Numpy
+                                    </div>
+                                </div></a>
+
+                                <a href="#" class="openModal" data-container="7"><div class="project-entry">
+                                    <div class="project c4">
+                                        PKM System
+                                        <p>Special</p>
+                                        <div class="circ-level"><p>-</p></div>
+                                    </div>
+                                    <div class="skills-used">
+                                        YAML, Latex
+                                    </div>
+                                </div></a>
+
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+
+    
+    <div id="container-1" class="modalContainer">
+        <div class="modalContent">
+            <div class="modalStuff">
+                <h2>Debugger</h2>
+                <p>Generation 0</p>
+                <hr>
+                <p>This individual, when debugging, increases awareness and power by 1.5x.</p>
+                <h3>DETAILS:</h3>
+                <p>When an individual with the Debugger ability enters the battlefield, it immediately activates its debugging prowess. This individual's acute perception and analytical skills enable it to detect and understand the underlying causes of various ailments and harmful effects affecting the program.</p>
+
+                <a href="#" id="close-ability"><div class="pokemon-entry">
+                    <div class="pokemon main-color">
+                        <h2>Kolade Alabi</h2><p> #001</p>
+                        <div class="circ-entry">
+                            <img src="resources/Haxorus_Profile.png"></img>
+                        </div>
+                    </div>
+                    <div class="types">
+                        <div class="mini-block b1">SWE</div>
+                    </div>
+                </div></a>
                 
-                    <hr>
-
-                    <h4>SKILL-SET</h4>
-
-                    <p>Resume: <a target="_blank" href="resources/Kolade_Alabi.pdf">Download</a></p>
-
-                    <aside id="skills">
-                        <ul>
-                            <li>Python</li>
-                            <li>Flask</li>
-                            <li>JavaScript</li>
-                            <li>R</li>
-                            <li>pandas</li>
-                            <li>TensorFlow</li>
-                        </ul>
-
-                        <ul>
-                            <li>C++</li>
-                            <li>SQLite</li>
-                            <li>HTML/CSS</li>
-                            <li>Git</li>
-                            <li>NumPy</li>
-                            <li>scipy</li>
-                        </ul>
-                    </aside>
-
-                </header>
-
-                <header class="social-links">
-                    <img id="social_img" src="resources/Golisopod_Drip.png" alt="Shiny version of the Pokemon Golisopod in gray and orange tones">
-                    <h3>Here are a few Social Links</h3>
-
-                    <a target="_blank" href="https://www.linkedin.com/in/kolade-alabi/">LinkedIn Profile</a>
-                    <br>
-                    <a target="_blank" href="https://github.com/Kalamojo">GitHub Profile</a>
-                </header>
+                <div class="close-container">
+                    <div class="leftright"></div>
+                    <div class="rightleft"></div>
+                </div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <section class="s2">
-        <div class="main-container">
-            <h3 style="text-align: center;">Main Projects</h3>
-            <div class="post-wrap">
+    <div id="container-2" class="modalContainer">
+        <div class="modalContent blend1">
+            <div class="modalStuff">
+                <img src="resources/atva_cover.png" alt="ATVA Project Image">
 
-                <div>
-                    <header class="post">
-                        <img class="thumbnail" src="resources/wayfind.png" alt="Cartoon drawing of a blue plane in the sky">
-                        <aside class="post-preview">
-                            <h6 class="post-title">Travel Recommendation Website</h6>
-                            <p class="post-intro">Prompts the user to answer some personality questions. Using this information, the site recommends a popular travel location with the right fit</p>
-                            <a target="_blank" href="https://kalamojo.github.io/wayfinder/">Link</a>
-                        </aside>
-                    </header>
-                </div>
+                <h2>Anime TrVAE</h2>
+                <span class="cent-col">
+                    <div class="mini-block c1">Python</div>
+                </span>
+                <ul class="side-by-side">
+                    <li>TensorFlow</li>
+                    <li>Keras</li>
+                    <li>OpenCV</li>
+                    <li>Pillow</li>
+                    <li>Scanpy</li>
+                    <li>Hugging Face</li>
+                    <li>Slurm</li>
+                </ul>
+                <hr>
+                <p>Computer Vision model that converts realistic face to anime portraits, and vice versa</p>
+                <h3>DETAILS:</h3>
+                <ul style="padding-right: 20px; display: grid; gap: 10px;">
+                    <li>Implemented a Transfer Variational Autoencoder, with datasets from Hugging Face, Google Cartoon Set, and the CelebA dataset, for bidirectional image transfers across Anime, Cartoon, and Realistic classes</li>
+                    <li>Trained custom TensorFlow models on 150,000 images across 3 different classes in GPU Cluster environment with Slurm</li>
+                </ul>
 
-                <div>
-                    <header class="post">
-                        <img class="thumbnail" src="resources/book_reco.png" alt="BookReco homepage">
-                        <aside class="post-preview">
-                            <h6 class="post-title">BookReco: Book Recommendation App</h6>
-                            <p class="post-intro">Tool to find and store your favorite books using intelligent searches</p>
-                            <a target="_blank" href="https://final-project-recommender.kalamojo.repl.co/index.html">Link</a>
-                        </aside>
-                    </header>
-                </div>
+                <a class="github-button" href="https://github.com/Kalamojo/Anime-TrVAE" target="_blank" rel="noopener noreferrer">
+                    <span class="github-icon"></span>
+                    Source
+                </a>
+            </div>
+            
 
-                <div>
-                    <header class="post">
-                        <img class="thumbnail" src="resources/word_cloud.png" alt="Word cloud of racing video games">
-                        <aside class="post-preview">
-                            <h6 class="post-title">Genre Classification Model</h6>
-                            <p class="post-intro">Predicts the genre of a given video game using their description</p>
-                            <a target="_blank" href="https://www.kaggle.com/code/koladealabi/notebook990cea50c7">Link</a>
-                        </aside>
-                    </header>
-                </div>
-
+            <div class="close-container">
+                <div class="leftright"></div>
+                <div class="rightleft"></div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <section class="s3">
-        <div class="main-container">
-            <h3 style="text-align: center;">Bookshelf</h3>
-            <h4 style="padding-left: 20px;"">Fiction</h4>
-            <div class="bookshelf">
-                <header class="fiction">
+    <div id="container-3" class="modalContainer">
+        <div class="modalContent blend1">
+            <div class="modalStuff">
+                <img src="resources/context_cover.png" alt="Sarcasm Detection Project Image">
 
-                    <div id="bookNo1" class="fic-item">
-                        <header class="book">
-                            <aside class="book-preview">
-                                <h6 class="book-remark">Best Standalone Book</h6>
-                            </aside>
-                            <img class="cover" src="resources/beyonders.jpg" alt="Cover of Beyonders: A World Without Heroes, by Brandon Mull">
-                        </header>
-                    </div>
+                <h2>Some Context, Please?</h2>
+                <span class="cent-col">
+                    <div class="mini-block c1">Python</div>
+                </span>
+                <ul class="side-by-side">
+                    <li>TensorFlow</li>
+                    <li>Keras</li>
+                    <li>PRAW</li>
+                    <li>Streamlit</li>
+                </ul>
+                <hr>
+                <p>Sarcasm Detection model that utilizes the context of a message</p>
+                <h3>DETAILS:</h3>
+                <ul style="padding-right: 20px; display: grid; gap: 10px;">
+                    <li>Developed and deployed a Sarcasm Detection web application utilizing 2D-input Basic and LSTM Keras Sequential models, achieving 96.7% same-distribution test accuracy</li>
+                    <li>Improved existing sarcasm detection methods by incorporating contextual information from comments paired with the title of the post they responded to, resulting in more accurate predictions</li>
+                    <li>Collected and processed data from the r/politics subreddit using the Python Reddit API Wrapper (PRAW), extracting more than 2,200 sarcastic comments for training the model as well as generating 2,000 more with the GPT-3.5 Large Language Model</li>
+                </ul>
 
-                    <div id="bookNo2" class="fic-item">
-                        <header class="book">
-                            <aside class="book-preview">
-                                <h6 class="book-remark">Best Series</h6>
-                            </aside>
-                            <img class="cover" src="resources/night_angel.jpg" alt="Cover of The Night Angel Trilogy, by Brent Weeks">
-                        </header>
-                    </div>
+                <a class="github-button" href="https://github.com/Kalamojo/Some-Context-Please" target="_blank" rel="noopener noreferrer">
+                    <span class="github-icon"></span>
+                    Source
+                </a>
+            </div>
+            
 
-                    <div id="bookNo3" class="fic-item">
-                        <header class="book">
-                            <aside class="book-preview">
-                                <h6 class="book-remark">Recent Favorite</h6>
-                            </aside>
-                            <img class="cover" src="resources/mistborn.jpg" alt="Cover of Mistborn, by Brandon Sanderson">
-                        </header>
-                    </div>
-
-                </header>
-
-                <h4 style="padding-left: 20px;"">Non-fiction</h4>
-                <header class="nonfiction">
-
-                    <div id="bookNo4" class="nonfic-item">
-                        <header class="book">
-                            <aside class="book-preview">
-                                <h6 class="book-remark">Productivity</h6>
-                            </aside>
-                            <img class="cover" src="resources/atom.jpg" alt="Cover of Atomic Habits, by James Clear">
-                        </header>
-                    </div>
-
-                    <div id="bookNo5" class="nonfic-item">
-                        <header class="book">
-                            <aside class="book-preview">
-                                <h6 class="book-remark">Focus</h6>
-                            </aside>
-                            <img class="cover" src="resources/deep.jpg" alt="Cover of Deep Work, by Cal Newport">
-                        </header>
-                    </div>
-
-                    <div id="bookNo6" class="nonfic-item">
-                        <header class="book">
-                            <aside class="book-preview">
-                                <h6 class="book-remark">Success</h6>
-                            </aside>
-                            <img class="cover" src="resources/outlike.jpg" alt="Cover of Outliers, by Malcolm Gladwell">
-                        </header>
-                    </div>
-
-                </header>
+            <div class="close-container">
+                <div class="leftright"></div>
+                <div class="rightleft"></div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <section class="s2">
-        <div class="main-container">
-            <h3 style="text-align: center;">Get in Touch</h3>
+    <div id="container-4" class="modalContainer">
+        <div class="modalContent blend3">
+            <div class="modalStuff">
+                <img src="resources/notifai_cover.png" alt="NotifAI Project Image">
 
-            <form id="contact-form" action="https://formsubmit.co/kalabiprof@gmail.com" method="POST">
-                <label>Name</label>
-                <input class="input-field" type="text" name="name">
+                <h2>NotifAI</h2>
+                <span class="cent-col">
+                    <div class="mini-block c3">React</div>
+                    <div class="mini-block c1">Python</div>
+                </span>
+                <ul class="side-by-side">
+                    <li>Cohere</li>
+                    <li>Flask</li>
+                    <li>PythonAnywhere</li>
+                    <li>Android Studio</li>
+                    <li>Expo</li>
+                </ul>
+                <hr>
+                <p>An LLM-powered Note-taking tool that assists users with understanding textbook material</p>
+                <h3>DETAILS:</h3>
+                <ul style="padding-right: 20px; display: grid; gap: 10px;">
+                    <li>Collaborated with two other team members to complete the entire developmental process within one week and meet the submission deadline for a Cohere AI Hackathon</li>
+                    <li>Employed Cohere AI's word embeddings, by way of a custom API making use of the Cohere embedding model, to enable text summarization and the extraction of main ideas</li>
+                </ul>
 
-                <label>Subject</label>
-                <input class="input-field" type="text" name="subject">
+                <a class="github-button" href="https://github.com/Kalamojo/notifAI" target="_blank" rel="noopener noreferrer">
+                    <span class="github-icon"></span>
+                    Source
+                </a>
+            </div>
+            
 
-                <label>Email</label>
-                <input class="input-field" type="text" name="email" required>
-
-                <input type="hidden" name="_next" value="https://kalamojo.github.io/thanks.html">
-
-                <label>Message</label>
-                <textarea class="input-field" name="message" required></textarea>
-
-                <input id="submit-btn" type="submit" value="Send">
-            </form>
+            <div class="close-container">
+                <div class="leftright"></div>
+                <div class="rightleft"></div>
+            </div>
         </div>
-    </section>
+    </div>
+
+    <div id="container-5" class="modalContainer">
+        <div class="modalContent blend2">
+            <div class="modalStuff">
+                <img src="resources/dbz-ps4v-xbox.gif" alt="Intro to Data Science Final Project Image">
+
+                <h2>Intro to Data Science Final</h2>
+                <span class="cent-col">
+                    <div class="mini-block c2">R</div>
+                    <div class="mini-block c1">Python</div>
+                </span>
+                <ul class="side-by-side">
+                    <li>NLTK</li>
+                    <li>scikit-learn</li>
+                    <li>Tkinter</li>
+                    <li>Keras</li>
+                    <li>Matplotlib</li>
+                </ul>
+                <hr>
+                <p>A Data Science project focusing on video games. Includes a game recommendation application along with a genre prediction model</p>
+                <h3>Research Questions:</h3>
+                <ol style="padding-right: 20px; display: grid; gap: 10px;">
+                    <li>Is there a significant difference in the mean meta score and user score between the platforms and the top 20 genres?</li>
+                    <li>Can we predict user scores from meta scores?</li>
+                    <li>What does the battle between PlayStation and Xbox look like? Who wins based on popularity and mean meta score and user score?</li>
+                    <li>Can we build a recommendation system from key words in the game description?</li>
+                    <li>Can we predict the genre of a particular game based on key words in the game description</li>
+                </ol>
+
+                <a class="github-button" href="https://github.com/Kalamojo/IntroDataScience_Final" target="_blank" rel="noopener noreferrer">
+                    <span class="github-icon"></span>
+                    Source
+                </a>
+            </div>
+            
+
+            <div class="close-container">
+                <div class="leftright"></div>
+                <div class="rightleft"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="container-6" class="modalContainer">
+        <div class="modalContent blend1">
+            <div class="modalStuff">
+                <img src="resources/animeRec_cover.png" alt="Anime Recommendation Project Image">
+
+                <h2>Anime Recommendation</h2>
+                <span class="cent-col">
+                    <div class="mini-block c1">Python</div>
+                </span>
+                <ul class="side-by-side">
+                    <li>scikit-learn</li>
+                    <li>Pandas</li>
+                    <li>NumPy</li>
+                </ul>
+                <hr>
+                <p>An Anime recommendation system that works without the use of Machine Learning</p>
+                <h3>DETAILS:</h3>
+                <ul style="padding-right: 20px; display: grid; gap: 10px;">
+                    <li>Developed a system for predicting which anime a user would like based on similar anime or similar users</li>
+                    <li>Preprocessed over 17,000 different anime series to obtain 80 columns of numerical values</li>
+                    <li>Utilized a simple cosine similarity calculation to make recommendations</li>
+                    <li>Awarded 1st place in Hack Research 2022 hackathon sponsored by Major league Hacking and GitHub</li>
+                </ul>
+
+                <a class="github-button" href="https://github.com/Kalamojo/Anime-Recommendation" target="_blank" rel="noopener noreferrer">
+                    <span class="github-icon"></span>
+                    Source
+                </a>
+            </div>
+            
+
+            <div class="close-container">
+                <div class="leftright"></div>
+                <div class="rightleft"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="container-7" class="modalContainer">
+        <div class="modalContent blend4">
+            <div class="modalStuff">
+                <img src="resources/graph_cover.png" alt="Obsidian PKM System knowledge graph Image">
+
+                <h2>Obsidian PKM System</h2>
+                <span class="cent-col">
+                    <div class="mini-block c4">Markdown</div>
+                </span>
+                <ul class="side-by-side">
+                    <li>YAML</li>
+                    <li>Latex</li>
+                </ul>
+                <hr>
+                <p>A note taking and personal knowledge management system maintained in Obsidian</p>
+                <h3>DETAILS:</h3>
+                <ul style="padding-right: 20px; display: grid; gap: 10px;">
+                    <li>Nurtured a representation of knowledge gained within the last year, including academic education, personal learning, and academic research, to make better connections between concepts</li>
+                    <li>Amassed nearly 1000 notes covering subjects related to Computer Science</li>
+                </ul>
+
+                <a class="github-button" href="https://github.com/Kalamojo/PKM_System" target="_blank" rel="noopener noreferrer">
+                    <span class="github-icon"></span>
+                    Source
+                </a>
+            </div>
+            
+
+            <div class="close-container">
+                <div class="leftright"></div>
+                <div class="rightleft"></div>
+            </div>
+        </div>
+    </div>
+
+
+    
 
     <script type="text/javascript" src="script.js"></script>
 
