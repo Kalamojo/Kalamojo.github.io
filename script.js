@@ -166,7 +166,6 @@ async function colorize() {
   let data2 = await response2.json();
   console.log(data2);
   let pallette = data2.result;
-  //console.log("Da data", colors);
   
   document.documentElement.style.setProperty('--light_shade', `rgb(${colors[0][0]}, ${colors[0][1]}, ${colors[0][2]})`);
   document.documentElement.style.setProperty('--light_accent', `rgb(${colors[1][0]}, ${colors[1][1]}, ${colors[1][2]})`);
