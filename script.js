@@ -151,7 +151,7 @@ console.log(stuff);
 
 async function colorize() {
   let darken = 0.6;
-  let response1 = await fetch("http://colormind.io/api/", {
+  let response1 = await fetch("https://colormind.io/api/", {
     method: "POST", 
     body: JSON.stringify({model : "ui"})
   });
@@ -159,7 +159,7 @@ async function colorize() {
   console.log(data1);
   let colors = data1.result;
 
-  let response2 = await fetch("http://colormind.io/api/", {
+  let response2 = await fetch("https://colormind.io/api/", {
     method: "POST", 
     body: JSON.stringify({model : "default", input : colors}),
   });
