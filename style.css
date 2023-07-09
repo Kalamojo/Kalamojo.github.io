@@ -1,25 +1,20 @@
 :root {
-    --light_shade: white;
-    --light_accent: white;
-    --main_brand: white;
-    --dark_accent: white;
-    --dark_shade: white;
-
-    --light_shade_thin: #F5F4F4CC;
-    --dark_accent_thin: white;
-    --main_brand_thin: #8D8F8033;
-
-    --themeDotBorder: black;
+    --light_shade: rgb(245, 244, 245);
+    --light_accent: rgb(189, 143, 124);
+    --main_brand: rgb(201, 117, 63);
+    --dark_accent: rgb(209, 100, 62);
+    --dark_accent_thin: rgb(209, 100, 62, 0.8);
+    --dark_shade: rgb(36, 28, 37);
 
     --foundation_dark: rgb(59, 58, 58);
     --foundation_dark_thin: rgb(59, 58, 58, 0.8);
 
     --blend_dark: rgb(40, 40, 40);
 
-    --pallette-1: white;
-    --pallette-2: white;
-    --pallette-3: white;
-    --pallette-4: white;
+    --pallette-1: rgb(115.2, 85.2, 75);
+    --pallette-2: rgb(120, 69, 28.2);
+    --pallette-3: rgb(124.2, 59.4, 29.4);
+    --pallette-4: rgb(54.6, 39, 30);
 }
 
 html, body, #main-pokedex {

@@ -171,7 +171,6 @@ async function colorize() {
   document.documentElement.style.setProperty('--light_shade', `rgb(${colors[0][0]}, ${colors[0][1]}, ${colors[0][2]})`);
   document.documentElement.style.setProperty('--light_accent', `rgb(${colors[1][0]}, ${colors[1][1]}, ${colors[1][2]})`);
   document.documentElement.style.setProperty('--main_brand', `rgb(${colors[2][0]}, ${colors[2][1]}, ${colors[2][2]})`);
-  document.documentElement.style.setProperty('--main_brand_thin', `rgb(${colors[2][0]}, ${colors[2][1]}, ${colors[2][2]}, 0.6)`);
   document.documentElement.style.setProperty('--dark_accent', `rgb(${colors[3][0]}, ${colors[3][1]}, ${colors[3][2]})`);
   document.documentElement.style.setProperty('--dark_accent_thin', `rgb(${colors[3][0]}, ${colors[3][1]}, ${colors[3][2]}, 0.8)`);
   document.documentElement.style.setProperty('--dark_shade', `rgb(${colors[4][0]}, ${colors[4][1]}, ${colors[4][2]})`);
