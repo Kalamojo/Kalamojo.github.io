@@ -1,18 +1,25 @@
 :root {
-    --light_shade: #F5F4F4;
-    --light_accent: #BAA068;
-    --main_brand: #8D8F80;
-    --dark_accent: #E55B14;
-    --dark_shade: #121416;
+    --light_shade: white;
+    --light_accent: white;
+    --main_brand: white;
+    --dark_accent: white;
+    --dark_shade: white;
 
     --light_shade_thin: #F5F4F4CC;
+    --dark_accent_thin: white;
     --main_brand_thin: #8D8F8033;
 
     --themeDotBorder: black;
-/*
-    --previewBG: rgb(251, 249, 243, 0.8);
-    --previewShadow: #f0ead6;
-*/
+
+    --foundation_dark: rgb(59, 58, 58);
+    --foundation_dark_thin: rgb(59, 58, 58, 0.8);
+
+    --blend_dark: rgb(40, 40, 40);
+
+    --pallette-1: white;
+    --pallette-2: white;
+    --pallette-3: white;
+    --pallette-4: white;
 }
 
 html, body, #main-pokedex {
@@ -61,9 +68,9 @@ hr {
     height: 220px;
     background-color: var(--light_accent);
     */
-    z-index: 1;
+    z-index: 2;
     top: 0;
-    transform: translateY(40%);
+    transform: translateY(30%);
 }
 
 .play {
@@ -91,20 +98,13 @@ hr {
 
 /* Background Stuff */
 
-#dex_bg_outer {
+#dex_bg {
     position: relative;
     margin-top: auto;
     width: 90%;
     height: 80%;
-    background-color: rgb(168, 110, 30);
-}
-
-
-#dex_bg_inner {
-    position: relative;
-    min-width: 100%;
-    height: 100%;
-    background-color: var(--main_brand_thin);
+    background: linear-gradient(var(--dark_accent_thin), var(--dark_accent_thin)),
+                linear-gradient(var(--foundation_dark), var(--foundation_dark));
 }
 
 
@@ -135,13 +135,14 @@ hr {
     width: 300%;
     height: 100%;
     pointer-events: none;
+    z-index: 1;
 }
 .shadow1 {
-    box-shadow: inset 0px 30px 18px -1px rgba(168, 110, 30, 0.8);
+    box-shadow: inset 0px 30px 18px -18px var(--foundation_dark_thin);
 }
 .shadow2 {
     height: 100%;
-    box-shadow: inset 0px 30px 18px -1px var(--main_brand_thin);
+    box-shadow: inset 0px 40px 18px -18px var(--dark_accent_thin);
 }
 
 .blocks {
@@ -166,7 +167,7 @@ hr {
 }
 
 .big-block {
-    background-color: rgb(59, 58, 58);
+    background-color: var(--foundation_dark);
     padding: 10px;
     margin: 15px 20px;
     box-shadow: 0px 0.5px 5px 0px #000000;
@@ -176,7 +177,7 @@ hr {
 }
 .mini-block {
     display: inline-block;
-    padding: 5px 15px;
+    padding: 5px 25px;
     width: auto;
 }
 
@@ -225,7 +226,7 @@ hr {
     width:28px;
     border-radius:28px;
     border:2px solid white;
-    background:rgb(59, 58, 58);
+    background: var(--foundation_dark);
     top: -1px;
     right: -14px;
 
@@ -251,10 +252,10 @@ hr {
 }
 
 .b1 {
-    background-color: rgb(87, 30, 166);
+    background-color: var(--dark_shade);
 }
 .b1 .circ-years {
-    border-color: rgb(87, 30, 166);
+    border-color: var(--dark_shade);
 }
 
 .b2 {
@@ -263,6 +264,55 @@ hr {
 .b2 .circ-years {
     border-color: var(--dark_accent);
 }
+
+
+.c1 {
+    background-color: var(--pallette-1);
+}
+.c1 .circ-level {
+    border-color: var(--pallette-1);
+}
+.c2 {
+    background-color: var(--pallette-2);
+}
+.c2 .circ-level {
+    border-color: var(--pallette-2);
+}
+.c3 {
+    background-color: var(--pallette-3);
+}
+.c3 .circ-level {
+    border-color: var(--pallette-3);
+}
+.c4 {
+    background-color: var(--pallette-4);
+}
+.c4 .circ-level {
+    border-color: var(--pallette-4);
+}
+
+.blend1 {
+    background: linear-gradient(var(--pallette-1), var(--blend_dark));
+}
+.blend2 {
+    background: linear-gradient(var(--pallette-2), var(--blend_dark));
+}
+.blend3 {
+    background: linear-gradient(var(--pallette-3), var(--blend_dark));
+}
+.blend4 {
+    background: linear-gradient(var(--pallette-4), var(--blend_dark));
+}
+
+
+
+.main-color {
+    background-color: var(--dark_accent_thin);
+}
+.main-color .circ-entry {
+    border-color: var(--dark_accent_thin);
+}
+
 
 
 
@@ -350,7 +400,7 @@ hr {
     width:36px;
     border-radius:36px;
     border:2px solid white;
-    background:rgb(59, 58, 58);
+    background: var(--foundation_dark);
     top: -3px;
     left: -18px;
 
@@ -375,6 +425,60 @@ hr {
     align-items: center;
 }
 
+/* Pokemon Entries */
+.pokemon-entry {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.pokemon {
+    width: 70%;
+    max-width: 400px;
+    height: 30px;
+    padding: 5px;
+    padding-left: 55px;
+    padding-right: 5px;
+    margin-right: 5px;
+    margin-left: 25px;
+    margin-top: 25px;
+    margin-bottom: 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+
+.circ-entry {
+    position: absolute;
+    height:72px;
+    width:72px;
+    border-radius:72px;
+    border:2px solid white;
+    background: var(--foundation_dark);
+    top: -3px;
+    left: -28px;
+
+    text-align: center;
+}
+.circ-entry img {
+    position: absolute;
+    top: -30%;
+    left: 0;
+}
+
+.types {
+    width: 70%;
+    max-width: 400px;
+    height: 30px;
+    margin-left: 60px;
+    padding: 5px;
+    display: flex;
+    justify-content: flex-start;
+}
+
 
 
 
@@ -383,12 +487,12 @@ hr {
 .flex-container {
     display: flex;
     flex-wrap: wrap;
-  }
+}
   
-  .flex-item {
+.flex-item {
     flex: 1 1 calc(50% - 10px); /* Adjust margin as needed */
     margin: 5px;
-  }
+}
   
 
 
@@ -428,7 +532,6 @@ hr {
     top: 0;
     width: 40%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
     z-index: 9999;
     margin-left: 0;
 }
@@ -438,10 +541,18 @@ hr {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgb(59, 58, 58);
+    background-color: var(--foundation_dark);
+    color: var(--light_shade);
     text-align: center;
     width: 100%;
     height: 100%;
+    overflow-x: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+.modalContent::-webkit-scrollbar { /* WebKit */
+    width: 0;
+    height: 0;
 }
 .in-view {
     left: 60%;
@@ -483,6 +594,25 @@ hr {
     margin-top: 20px;
 }
 
+.github-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+}
+  
+.github-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url(https://github.com/fluidicon.png);
+    background-size: cover;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
 
 .close-container{
     position: absolute;
@@ -500,45 +630,36 @@ hr {
     width: 50px;
     position: absolute;
     margin-top: 24px;
-    background-color: orange;
+    background-color: var(--light_accent);
     border-radius: 2px;
     transform: rotate(45deg);
     transition: all .3s ease-in;
 }
-  
+
 .rightleft{
     height: 4px;
     width: 50px;
     position: absolute;
     margin-top: 24px;
-    background-color: orange;
+    background-color: var(--light_accent);
     border-radius: 2px;
     transform: rotate(-45deg);
     transition: all .3s ease-in;
 }
   
-label{
-    color: white;
-    font-family: Helvetica, Arial, sans-serif; 
-    font-size: .6em;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    transition: all .3s ease-in;
-    opacity: 0;
-}
+
 .close{
     margin: 50px 0 0 0;
     left: 6px;
-    position: absolute;
 }
-  
+
 .close-container:hover .leftright{
     transform: rotate(-45deg);
-    background-color: red;
+    background-color: var(--main_brand);
 }
 .close-container:hover .rightleft{
     transform: rotate(45deg);
-    background-color: red;
+    background-color: var(--main_brand);
 }
 .close-container:hover label{
     opacity: 1;
@@ -551,13 +672,13 @@ label{
 
 
 @media screen and (max-width: 950px){
-    #dex_bg_outer {
+    #dex_bg {
         width: 100%;
     }
 
 
     #profile-holder {
-        transform: translateY(30%);
+        transform: translateY(20%);
     }
 
     .right-arrow {
@@ -597,9 +718,5 @@ label{
     }
     .shift-view {
         width: 100%;
-    }
-
-    .modalStuff {
-        padding: 0;
     }
 }
