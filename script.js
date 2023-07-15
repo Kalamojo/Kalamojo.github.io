@@ -179,4 +179,4 @@ async function colorize() {
   }
 }
 
-colorize();
+//colorize();
