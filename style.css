@@ -59,6 +59,9 @@ h2 {
     color: var(--light_shade);
     font-size: 1.6em;
 }
+.small-big {
+    font-size: 1.2em;
+}
 
 
 
@@ -752,6 +755,9 @@ hr {
     }
     .measure-big label {
         font-size: 1.5em;
+    }
+    .small-big {
+        font-size: 1em;
     }
 
 
