@@ -3,6 +3,8 @@ const pages = document.querySelectorAll('.blocks');
 const playButton = document.querySelector('.play');
 const audioPlayer = document.querySelector('#sound1');
 const profile_pic = document.querySelector("#profile-holder");
+const nav_left = document.querySelector("#nav-left");
+const nav_right = document.querySelector("#nav-right");
 
 playButton.addEventListener('click', togglePlayback);
 
@@ -28,6 +30,7 @@ container.addEventListener('scroll', synchronizeScroll);
 
 function synchronizeScroll() {
   const activePageIndex = Math.round(container.scrollLeft / container.offsetWidth);
+  console.log("Active page", activePageIndex);
   const activePage = pages[activePageIndex];
 
   pages.forEach((page, index) => {
@@ -36,6 +39,46 @@ function synchronizeScroll() {
     }
   });
 }
+
+nav_right.addEventListener('click', scrollRight);
+nav_left.addEventListener('click', scrollLeft);
+
+function scrollRight() {
+  const nextPageIndex = Math.round(container.scrollLeft / container.offsetWidth) + 1;
+  console.log("Current right page:", nextPageIndex);
+  if (nextPageIndex < 3) {
+    const nextPageScrollPosition = nextPageIndex * container.offsetWidth;
+    container.scrollTo({
+      left: nextPageScrollPosition,
+      behavior: 'smooth' // Use smooth scrolling behavior
+    });
+  }
+  if (nextPageIndex >= 2) {
+    nav_right.classList.add("unavailable");
+  } else {
+    nav_right.classList.remove("unavailable");
+    nav_left.classList.remove("unavailable");
+  }
+}
+
+function scrollLeft() {
+  const nextPageIndex = Math.round(container.scrollLeft / container.offsetWidth) - 1;
+  console.log("Current left page:", nextPageIndex);
+  if (nextPageIndex >= 0) {
+    const nextPageScrollPosition = nextPageIndex * container.offsetWidth;
+    container.scrollTo({
+      left: nextPageScrollPosition,
+      behavior: 'smooth' // Use smooth scrolling behavior
+    });
+  }
+  if (nextPageIndex <= 0) {
+    nav_left.classList.add("unavailable");
+  } else {
+    nav_left.classList.remove("unavailable");
+    nav_right.classList.remove("unavailable");
+  }
+}
+
 
 let scrollTimeout;
 pages.forEach((page, index) => {
